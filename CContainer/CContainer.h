@@ -4,13 +4,7 @@
 
 #ifndef _CContainer_h_
 #define _CContainer_h_
-#include "Global.h"
 #include "CBinarySemaphore.h"
-#include "CSharedMemory.h"
-#include <pthread.h>
-#include <new>
-#include <unistd.h>
-#include <sys/types.h>
 #include <iostream>
 using namespace std;
 
@@ -18,14 +12,14 @@ using namespace std;
 
 class CContainer{
 public:
-	CContainer();
-	~CContainer();
-	void set_data(int pData);
-	void get_data();
+	CContainer();						//Constructor with 0 parameter 
+	~CContainer();						//Desructor
+	void set_data(int pData);			//Setter
+	void get_data();					//Getter
 	
 public:
-	int mData[ARRAY_SIZE];
-	CBinarySemaphore read;
+	int mData[ARRAY_SIZE];				//Static array 
+	CBinarySemaphore read;				
 	CBinarySemaphore write;
 };
 

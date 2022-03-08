@@ -36,7 +36,7 @@ int main() {
 
 void *main_producer(void *){		//Defining function for threading
 	for(int i{}; i<20;i++){
-		ptr->set_data(1);
+		ptr->set_data(5);
 	}
 };		
 void *main_consumer(void *){		//Defining function for threading	
